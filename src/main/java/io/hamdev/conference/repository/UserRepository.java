@@ -1,4 +1,4 @@
-package io.hamdev.conference.controller.repository;
+package io.hamdev.conference.repository;
 
 import io.hamdev.conference.model.User;
 

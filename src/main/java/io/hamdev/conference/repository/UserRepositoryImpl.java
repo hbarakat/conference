@@ -1,4 +1,4 @@
-package io.hamdev.conference.controller.repository;
+package io.hamdev.conference.repository;
 
 import io.hamdev.conference.model.User;
 import org.springframework.stereotype.Repository;
@@ -12,7 +12,7 @@ public class UserRepositoryImpl implements UserRepository {
     private EntityManager entityManager;
 
     @Override
-    public User save(User user){
+    public User save(User user) {
         entityManager.persist(user);
         return user;
     }

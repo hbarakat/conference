@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-@Autowired
-private UserService userService;
+    @Autowired
+    private UserService userService;
+
     @GetMapping("/user")
     public User getUser(@RequestParam(value = "firstname", defaultValue = "Bryan") String firstname,
                         @RequestParam(value = "lastname", defaultValue = "Hansen") String lastname,
