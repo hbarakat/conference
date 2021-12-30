@@ -1,5 +1,6 @@
 package io.hamdev.conference.service;
 
+import io.hamdev.conference.model.RegistrationReport;
 import io.hamdev.conference.repository.CourseRepository;
 import io.hamdev.conference.repository.RegistrationRepository;
 import io.hamdev.conference.model.Course;
@@ -35,4 +36,10 @@ Course course=new Course();
     public List<Registration> findAll() {
         return registrationRepository.findAll();
     }
+
+    @Override
+    public List<RegistrationReport> findAllReports() {
+        return registrationRepository.findAllReports();
+    }
+
 }

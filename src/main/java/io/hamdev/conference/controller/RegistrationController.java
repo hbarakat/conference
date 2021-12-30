@@ -1,6 +1,7 @@
 package io.hamdev.conference.controller;
 
 import io.hamdev.conference.model.Registration;
+import io.hamdev.conference.model.RegistrationReport;
 import io.hamdev.conference.service.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,12 @@ public class RegistrationController {
         return  registrations;
     }
 
+    @GetMapping("registration-reports")
+    public @ResponseBody
+    List<RegistrationReport> getRegistrationReports() {
+        List<RegistrationReport> registrationReports= registrationService.findAllReports();
+        return  registrationReports;
+    }
 
 
 
